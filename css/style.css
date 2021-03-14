@@ -1,0 +1,79 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:  #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image:  linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40,180,131,0.8)
+    ),
+    url(../img/hero.jpg);
+background-size: cover;
+
+/*image 가 화면 크기에 따라서 어떻게 배치되는지 보여준다 그때 기준 (top bottom center)  */
+background-position: top;
+clip-path: polygon(0 0, 100% 0, 100% 200px, 0 100%);
+
+}
+
+/*로고*/
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+}
+
+.logo {
+    height: 35px;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+}
+
+.text-box {
+    /* parent 기준으로 위치를 잡는다*/
+position: absolute;
+left: 50%;
+top: 40%;
+transform: translate(-50%, -50%);
+}
+
