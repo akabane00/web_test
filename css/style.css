@@ -67,13 +67,35 @@ clip-path: polygon(0 0, 100% 0, 100% 200px, 0 100%);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.5px;
+    animation-name: moveInleft;
+    animation-duration: 5s;
+
+    animation-timing-function: ease-out
 }
 
 .text-box {
     /* parent 기준으로 위치를 잡는다*/
+    /*CSS 꼼수  */
 position: absolute;
 left: 50%;
 top: 40%;
 transform: translate(-50%, -50%);
 }
 
+@keyframes moveInleft {
+0% {
+    opacity: 0;
+    transform: translateX(-100px) rotate (0deg);
+}
+60% {
+    transform: rotate(60deg);
+}
+80% {
+    transform: translateX(20px);
+}
+100% {
+    opacity: 1;
+    transform: translate(0);
+}
+
+}
